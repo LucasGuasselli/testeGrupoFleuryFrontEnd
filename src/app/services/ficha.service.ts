@@ -14,7 +14,7 @@ export class FichaService {
 
   constructor(private http: HttpClient) { }
 
-  retornarTodos(): Observable<Ficha[]> 
+  getAll(): Observable<Ficha[]> 
   {
     return this.http.get<Ficha[]>(`${API_CONFIG.baseUrl}/api/ficha/`);
   }

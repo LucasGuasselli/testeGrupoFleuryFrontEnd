@@ -18,10 +18,12 @@ import { HomeComponent } from './views/home/home.component';
 import { FichaService } from './services/ficha.service';
 
 import { HttpClientModule } from  '@angular/common/http';
-import { ListaFicha2Component } from './lista-ficha2/lista-ficha2.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { UnidadeService } from './services/unidade.service';
+import { ClienteService } from './services/cliente.service';
+import { ItemService } from './services/item.service';
 
 
 
@@ -32,8 +34,7 @@ import { MatSortModule } from '@angular/material/sort';
     FichasComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent,
-    ListaFicha2Component
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +49,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatSortModule
   ],
-  providers: [FichaService],
+  providers: [FichaService, UnidadeService, ClienteService, ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

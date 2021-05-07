@@ -1,6 +1,6 @@
 export interface Ficha 
 {
-    id?: number
+    id: number
     dataAtendimento: Date
     clienteId: number
     unidadeId: number
