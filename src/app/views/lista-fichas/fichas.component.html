@@ -1,28 +1,58 @@
 <div class="mat-elevation-z4">
-    <table mat-table [dataSource]="fichas"  aria-label="fichas">
+    <table mat-table [dataSource]="storedProcedures"  aria-label="storedProcedures">
       
-        <!-- Id Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef >Cod_Ficha</th>
-        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+        <!-- Unidade Nome Column -->
+      <ng-container matColumnDef="unidadeNome">
+        <th mat-header-cell *matHeaderCellDef >Nome_Unidade</th>
+        <td mat-cell *matCellDef="let row">{{row.unidadeNome}}</td>
       </ng-container>
   
-      <!-- Data Aetndimento Column -->
-      <ng-container matColumnDef="dataAtendimento">
-        <th mat-header-cell *matHeaderCellDef >Data_Atendimento</th>
-        <td mat-cell *matCellDef="let row">{{row.dataAtendimento}}</td>
-      </ng-container>
-  
-      <!-- ClienteId Column -->
-      <ng-container matColumnDef="clienteId">
-        <th mat-header-cell *matHeaderCellDef >Cod_Cliente</th>
-        <td mat-cell *matCellDef="let row">{{row.clienteId}}</td>
-      </ng-container>
-
-      <!-- UnidadeId Column -->
+      <!-- Unidade Id Column -->
       <ng-container matColumnDef="unidadeId">
         <th mat-header-cell *matHeaderCellDef >Cod_Unidade</th>
         <td mat-cell *matCellDef="let row">{{row.unidadeId}}</td>
+      </ng-container>
+  
+      <!-- Ficha Id Column -->
+      <ng-container matColumnDef="fichaId">
+        <th mat-header-cell *matHeaderCellDef >Numero_ficha</th>
+        <td mat-cell *matCellDef="let row">{{row.fichaId}}</td>
+      </ng-container>
+
+      <!-- Data Atendimento Column -->
+      <ng-container matColumnDef="dataAtendimento">
+        <th mat-header-cell *matHeaderCellDef >Data_Ficha</th>
+        <td mat-cell *matCellDef="let row">{{row.dataAtendimento}}</td>
+      </ng-container>
+
+      <!-- Nome Completo Column -->
+      <ng-container matColumnDef="clienteNome">
+        <th mat-header-cell *matHeaderCellDef >Nome Completo</th>
+        <td mat-cell *matCellDef="let row">{{row.clienteNome}}</td>
+      </ng-container>     
+
+      <!-- Data Nascimento Column -->
+      <ng-container matColumnDef="dataNasc">
+        <th mat-header-cell *matHeaderCellDef >Data_Ficha</th>
+        <td mat-cell *matCellDef="let row">{{row.dataNasc}}</td>
+      </ng-container>
+
+      <!-- Numero Item Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef >Numero_Item</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+
+      <!-- Numero SubItem Column -->
+      <ng-container matColumnDef="idSubItem">
+        <th mat-header-cell *matHeaderCellDef >Data_Ficha</th>
+        <td mat-cell *matCellDef="let row">{{row.dataAtendimento}}</td>
+      </ng-container>
+
+       <!-- Sigla Exame Column -->
+       <ng-container matColumnDef="sigaExame">
+        <th mat-header-cell *matHeaderCellDef >Exame</th>
+        <td mat-cell *matCellDef="let row">{{row.siglaExame}}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

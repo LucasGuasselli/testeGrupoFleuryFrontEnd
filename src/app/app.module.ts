@@ -24,6 +24,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { UnidadeService } from './services/unidade.service';
 import { ClienteService } from './services/cliente.service';
 import { ItemService } from './services/item.service';
+import { StoredProcedureService } from './services/stored-procedure.service';
 
 
 
@@ -49,7 +50,7 @@ import { ItemService } from './services/item.service';
     MatPaginatorModule,
     MatSortModule
   ],
-  providers: [FichaService, UnidadeService, ClienteService, ItemService],
+  providers: [FichaService, UnidadeService, ClienteService, ItemService, StoredProcedureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
