@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ficha } from 'src/app/models/ficha.model';
+import { FichaService } from 'src/app/services/ficha.service';
 
 @Component({
   selector: 'app-fichas',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FichasComponent implements OnInit {
 
-  constructor() { }
+  fichas: Ficha[] = [];
+
+  constructor(private fichaService: FichaService) { }
 
   ngOnInit(): void {
+   // this.fichaService.showOnConsole("TESTE!!");
+    this.carregarFichas();
   }
 
+  carregarFichas()
+  {
+    this.fichaService.retornarTodos().subscribe(
+      response =>
+      {
+        this.fichas = response;
+        console.log(response);
+      },
+      error => { console.log(error); }
+    );
+  }
 }

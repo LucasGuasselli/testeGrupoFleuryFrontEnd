@@ -15,6 +15,10 @@ import { MatCardModule} from '@angular/material/card';
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
+import { FichaService } from './services/ficha.service';
+
+import { HttpClientModule } from  '@angular/common/http';
+
 
 
 @NgModule({
@@ -33,9 +37,10 @@ import { HomeComponent } from './views/home/home.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [FichaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
