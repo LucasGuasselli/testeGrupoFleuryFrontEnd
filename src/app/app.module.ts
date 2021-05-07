@@ -18,6 +18,10 @@ import { HomeComponent } from './views/home/home.component';
 import { FichaService } from './services/ficha.service';
 
 import { HttpClientModule } from  '@angular/common/http';
+import { ListaFicha2Component } from './lista-ficha2/lista-ficha2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -28,7 +32,8 @@ import { HttpClientModule } from  '@angular/common/http';
     FichasComponent,
     FooterComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    ListaFicha2Component
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,10 @@ import { HttpClientModule } from  '@angular/common/http';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [FichaService],
   bootstrap: [AppComponent]

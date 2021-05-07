@@ -7,9 +7,11 @@ import { FichaService } from 'src/app/services/ficha.service';
   templateUrl: './fichas.component.html',
   styleUrls: ['./fichas.component.css']
 })
+
 export class FichasComponent implements OnInit {
 
   fichas: Ficha[] = [];
+  displayedColumns = ['id', 'dataAtendimento', 'clienteId', 'unidadeId'];
 
   constructor(private fichaService: FichaService) { }
 
@@ -18,6 +20,7 @@ export class FichasComponent implements OnInit {
     this.carregarFichas();
   }
 
+  // recebendo as fichas do back-end
   carregarFichas()
   {
     this.fichaService.retornarTodos().subscribe(
